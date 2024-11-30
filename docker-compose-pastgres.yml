@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    #restart: always
+    ports:
+      -5000:5432
+    networks:
+      - backend
+    volumes:
+      -C:\Users\Administrator\Documents\data-base-docker:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+networks:
+  backend:
+    driver: bridge
+    
