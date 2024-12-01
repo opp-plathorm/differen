@@ -8,10 +8,10 @@ services:
     networks:
       - backend
     volumes:
-      -C:\Users\Administrator\Documents\data-base-docker:/var/lib/postgresql/data
+      -C:/Users/Administrator/Documents/data-base-docker = /var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - PGDATA = /var/lib/postgresql/data/pgdata
 networks:
   backend:
     driver: bridge
